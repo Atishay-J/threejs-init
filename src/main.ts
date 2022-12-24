@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import createCube from './createCube';
-import createLine from './createLine';
+// import createLine from './createLine';
 import createScence from './createScene';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import babyHippo from './models/babyhippo.glb';
@@ -10,7 +10,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 const loader = new GLTFLoader();
 const renderer = new THREE.WebGLRenderer();
 const { camera, scene } = createScence();
-const controls = new OrbitControls(camera, renderer.domElement);
+new OrbitControls(camera, renderer.domElement);
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 const directionalLight = new THREE.DirectionalLight(0xffffff, 0.7);
 const pointLight = new THREE.PointLight(0xffffff, 5, 10, 20);

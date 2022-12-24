@@ -7,3 +7,5 @@ declare module '*.gltf' {
   const src: string;
   export default src;
 }
+
+declare module 'three/addons/loaders/GLTFLoader.js';
