@@ -10,6 +10,11 @@ const loader = new GLTFLoader();
 const renderer = new THREE.WebGLRenderer();
 const { camera, scene } = createScence();
 const controls = new OrbitControls(camera, renderer.domElement);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 0.7);
+
+scene.add(ambientLight);
+scene.add(directionalLight);
 
 // const cube = createCube();
 // const line = createLine();
