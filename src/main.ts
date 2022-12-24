@@ -14,11 +14,14 @@ const controls = new OrbitControls(camera, renderer.domElement);
 // const cube = createCube();
 // const line = createLine();
 
+let hippo: THREE.Object3D<THREE.Event>;
+
 loader.load(
   babyHippo,
   function (glb: { scene: THREE.Object3D<THREE.Event> }) {
-    const hippo = glb.scene;
+    hippo = glb.scene;
     // hippo.position.y = 2;
+
     scene.add(hippo);
   },
   undefined,
@@ -41,6 +44,7 @@ function animate() {
 
   // cube.rotation.x += 0.01;
   // cube.rotation.y += 0.01;
+  hippo.rotation.y += 0.01;
 
   renderer.render(scene, camera);
 }
